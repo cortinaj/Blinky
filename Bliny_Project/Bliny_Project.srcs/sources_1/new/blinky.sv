@@ -6,11 +6,11 @@
 // Create Date: 07/11/2025 06:21:30 PM
 // Design Name: 
 // Module Name: blinky
-// Project Name: 
+// Project Name: Blinky
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// Blinks and LED on the Zybo Z7-10 board.
 // Dependencies: 
 // 
 // Revision:
@@ -24,4 +24,11 @@ module blinky(
     input clk,
     output led
     );
+    
+    logic [24:0] count = 0;
+    assign led = count[24];
+    
+    always_ff @(posedge clk) begin
+        count <= count + 1;
+    end
 endmodule
