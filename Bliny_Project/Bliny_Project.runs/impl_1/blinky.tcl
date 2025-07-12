@@ -106,6 +106,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 1  }
   open_checkpoint blinky_routed.dcp
   set_property webtalk.parent_dir C:/Users/jcort/Zybo_Projects/Blinky/Blinky/Bliny_Project/Bliny_Project.cache/wt [current_project]

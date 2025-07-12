@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Jul 11 18:33:46 2025
+| Date         : Fri Jul 11 19:09:25 2025
 | Host         : Muddah_S_Hole running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file blinky_clock_utilization_routed.rpt
 | Design       : blinky
@@ -57,7 +57,7 @@ Table of Contents
 +-----------+-----------+-----------------+------------+-----------+--------------+-------------+-----------------+---------------------+--------------+-----------------+----------+
 | Source Id | Global Id | Driver Type/Pin | Constraint | Site      | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin      | Net      |
 +-----------+-----------+-----------------+------------+-----------+--------------+-------------+-----------------+---------------------+--------------+-----------------+----------+
-| src0      | g0        | IBUF/O          | IOB_X0Y76  | IOB_X0Y76 | X1Y1         |           1 |               0 |               8.000 | sys_clk_pin  | clk_IBUF_inst/O | clk_IBUF |
+| src0      | g0        | IBUF/O          | IOB_X0Y78  | IOB_X0Y78 | X1Y1         |           1 |               0 |               8.000 | sys_clk_pin  | clk_IBUF_inst/O | clk_IBUF |
 +-----------+-----------+-----------------+------------+-----------+--------------+-------------+-----------------+---------------------+--------------+-----------------+----------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -146,7 +146,7 @@ set_property LOC BUFGCTRL_X0Y16 [get_cells clk_IBUF_BUFG_inst]
 # Location of IO Primitives which is load of clock spine
 
 # Location of clock ports
-set_property LOC IOB_X0Y76 [get_ports clk]
+set_property LOC IOB_X0Y78 [get_ports clk]
 
 # Clock net "clk_IBUF_BUFG" driven by instance "clk_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y16"
 #startgroup

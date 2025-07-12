@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Fri Jul 11 18:33:46 2025
+| Date         : Fri Jul 11 19:09:24 2025
 | Host         : Muddah_S_Hole running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file blinky_timing_summary_routed.rpt -pb blinky_timing_summary_routed.pb -rpx blinky_timing_summary_routed.rpx -warn_on_violation
 | Design       : blinky
@@ -234,8 +234,8 @@ Slack (MET) :             5.289ns  (required time - arrival time)
   Data Path Delay:        2.542ns  (logic 1.923ns (75.652%)  route 0.619ns (24.348%))
   Logic Levels:           7  (CARRY4=7)
   Clock Path Skew:        -0.195ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.954ns = ( 12.954 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -247,15 +247,15 @@ Slack (MET) :             5.289ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -265,37 +265,37 @@ Slack (MET) :             5.289ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.632 r  count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.632    count_reg[16]_i_1_n_0
+                                                      0.114     7.631 r  count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.631    count_reg[16]_i_1_n_0
     SLICE_X43Y52         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.746 r  count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.746    count_reg[20]_i_1_n_0
+                                                      0.114     7.745 r  count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.745    count_reg[20]_i_1_n_0
     SLICE_X43Y53         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.223     7.969 r  count_reg[24]_i_1/O[0]
-                         net (fo=1, routed)           0.000     7.969    count_reg[24]_i_1_n_7
+                                                      0.223     7.968 r  count_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000     7.968    count_reg[24]_i_1_n_7
     SLICE_X43Y53         FDRE                                         r  count_reg[24]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.563    12.955    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.563    12.954    clk_IBUF_BUFG
     SLICE_X43Y53         FDRE                                         r  count_reg[24]/C
                          clock pessimism              0.277    13.231    
                          clock uncertainty           -0.035    13.196    
     SLICE_X43Y53         FDRE (Setup_fdre_C_D)        0.062    13.258    count_reg[24]
   -------------------------------------------------------------------
                          required time                         13.258    
-                         arrival time                          -7.969    
+                         arrival time                          -7.968    
   -------------------------------------------------------------------
                          slack                                  5.289    
 
@@ -310,8 +310,8 @@ Slack (MET) :             5.293ns  (required time - arrival time)
   Data Path Delay:        2.539ns  (logic 1.920ns (75.623%)  route 0.619ns (24.377%))
   Logic Levels:           6  (CARRY4=6)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -323,15 +323,15 @@ Slack (MET) :             5.293ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -341,34 +341,34 @@ Slack (MET) :             5.293ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.632 r  count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.632    count_reg[16]_i_1_n_0
+                                                      0.114     7.631 r  count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.631    count_reg[16]_i_1_n_0
     SLICE_X43Y52         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     7.966 r  count_reg[20]_i_1/O[1]
-                         net (fo=1, routed)           0.000     7.966    count_reg[20]_i_1_n_6
+                                                      0.334     7.965 r  count_reg[20]_i_1/O[1]
+                         net (fo=1, routed)           0.000     7.965    count_reg[20]_i_1_n_6
     SLICE_X43Y52         FDRE                                         r  count_reg[21]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y52         FDRE                                         r  count_reg[21]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[21]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.966    
+                         arrival time                          -7.965    
   -------------------------------------------------------------------
                          slack                                  5.293    
 
@@ -383,8 +383,8 @@ Slack (MET) :             5.314ns  (required time - arrival time)
   Data Path Delay:        2.518ns  (logic 1.899ns (75.420%)  route 0.619ns (24.580%))
   Logic Levels:           6  (CARRY4=6)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -396,15 +396,15 @@ Slack (MET) :             5.314ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -414,34 +414,34 @@ Slack (MET) :             5.314ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.632 r  count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.632    count_reg[16]_i_1_n_0
+                                                      0.114     7.631 r  count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.631    count_reg[16]_i_1_n_0
     SLICE_X43Y52         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     7.945 r  count_reg[20]_i_1/O[3]
-                         net (fo=1, routed)           0.000     7.945    count_reg[20]_i_1_n_4
+                                                      0.313     7.944 r  count_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000     7.944    count_reg[20]_i_1_n_4
     SLICE_X43Y52         FDRE                                         r  count_reg[23]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y52         FDRE                                         r  count_reg[23]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[23]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.945    
+                         arrival time                          -7.944    
   -------------------------------------------------------------------
                          slack                                  5.314    
 
@@ -456,8 +456,8 @@ Slack (MET) :             5.388ns  (required time - arrival time)
   Data Path Delay:        2.444ns  (logic 1.825ns (74.675%)  route 0.619ns (25.325%))
   Logic Levels:           6  (CARRY4=6)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -469,15 +469,15 @@ Slack (MET) :             5.388ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -487,34 +487,34 @@ Slack (MET) :             5.388ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.632 r  count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.632    count_reg[16]_i_1_n_0
+                                                      0.114     7.631 r  count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.631    count_reg[16]_i_1_n_0
     SLICE_X43Y52         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239     7.871 r  count_reg[20]_i_1/O[2]
-                         net (fo=1, routed)           0.000     7.871    count_reg[20]_i_1_n_5
+                                                      0.239     7.870 r  count_reg[20]_i_1/O[2]
+                         net (fo=1, routed)           0.000     7.870    count_reg[20]_i_1_n_5
     SLICE_X43Y52         FDRE                                         r  count_reg[22]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y52         FDRE                                         r  count_reg[22]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[22]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.871    
+                         arrival time                          -7.870    
   -------------------------------------------------------------------
                          slack                                  5.388    
 
@@ -529,8 +529,8 @@ Slack (MET) :             5.404ns  (required time - arrival time)
   Data Path Delay:        2.428ns  (logic 1.809ns (74.508%)  route 0.619ns (25.491%))
   Logic Levels:           6  (CARRY4=6)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -542,15 +542,15 @@ Slack (MET) :             5.404ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -560,34 +560,34 @@ Slack (MET) :             5.404ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.632 r  count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.632    count_reg[16]_i_1_n_0
+                                                      0.114     7.631 r  count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.631    count_reg[16]_i_1_n_0
     SLICE_X43Y52         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.223     7.855 r  count_reg[20]_i_1/O[0]
-                         net (fo=1, routed)           0.000     7.855    count_reg[20]_i_1_n_7
+                                                      0.223     7.854 r  count_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000     7.854    count_reg[20]_i_1_n_7
     SLICE_X43Y52         FDRE                                         r  count_reg[20]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y52         FDRE                                         r  count_reg[20]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y52         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[20]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.855    
+                         arrival time                          -7.854    
   -------------------------------------------------------------------
                          slack                                  5.404    
 
@@ -602,8 +602,8 @@ Slack (MET) :             5.407ns  (required time - arrival time)
   Data Path Delay:        2.425ns  (logic 1.806ns (74.477%)  route 0.619ns (25.523%))
   Logic Levels:           5  (CARRY4=5)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -615,15 +615,15 @@ Slack (MET) :             5.407ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -633,31 +633,31 @@ Slack (MET) :             5.407ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     7.852 r  count_reg[16]_i_1/O[1]
-                         net (fo=1, routed)           0.000     7.852    count_reg[16]_i_1_n_6
+                                                      0.334     7.851 r  count_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000     7.851    count_reg[16]_i_1_n_6
     SLICE_X43Y51         FDRE                                         r  count_reg[17]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[17]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y51         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[17]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.852    
+                         arrival time                          -7.851    
   -------------------------------------------------------------------
                          slack                                  5.407    
 
@@ -672,8 +672,8 @@ Slack (MET) :             5.428ns  (required time - arrival time)
   Data Path Delay:        2.404ns  (logic 1.785ns (74.254%)  route 0.619ns (25.746%))
   Logic Levels:           5  (CARRY4=5)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -685,15 +685,15 @@ Slack (MET) :             5.428ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -703,31 +703,31 @@ Slack (MET) :             5.428ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     7.831 r  count_reg[16]_i_1/O[3]
-                         net (fo=1, routed)           0.000     7.831    count_reg[16]_i_1_n_4
+                                                      0.313     7.830 r  count_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     7.830    count_reg[16]_i_1_n_4
     SLICE_X43Y51         FDRE                                         r  count_reg[19]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[19]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y51         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[19]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.831    
+                         arrival time                          -7.830    
   -------------------------------------------------------------------
                          slack                                  5.428    
 
@@ -742,8 +742,8 @@ Slack (MET) :             5.502ns  (required time - arrival time)
   Data Path Delay:        2.330ns  (logic 1.711ns (73.436%)  route 0.619ns (26.564%))
   Logic Levels:           5  (CARRY4=5)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -755,15 +755,15 @@ Slack (MET) :             5.502ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -773,31 +773,31 @@ Slack (MET) :             5.502ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239     7.757 r  count_reg[16]_i_1/O[2]
-                         net (fo=1, routed)           0.000     7.757    count_reg[16]_i_1_n_5
+                                                      0.239     7.756 r  count_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     7.756    count_reg[16]_i_1_n_5
     SLICE_X43Y51         FDRE                                         r  count_reg[18]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[18]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y51         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[18]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.757    
+                         arrival time                          -7.756    
   -------------------------------------------------------------------
                          slack                                  5.502    
 
@@ -812,8 +812,8 @@ Slack (MET) :             5.518ns  (required time - arrival time)
   Data Path Delay:        2.314ns  (logic 1.695ns (73.253%)  route 0.619ns (26.747%))
   Logic Levels:           5  (CARRY4=5)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -825,15 +825,15 @@ Slack (MET) :             5.518ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -843,31 +843,31 @@ Slack (MET) :             5.518ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.518 r  count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     7.518    count_reg[12]_i_1_n_0
+                                                      0.114     7.517 r  count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     7.517    count_reg[12]_i_1_n_0
     SLICE_X43Y51         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.223     7.741 r  count_reg[16]_i_1/O[0]
-                         net (fo=1, routed)           0.000     7.741    count_reg[16]_i_1_n_7
+                                                      0.223     7.740 r  count_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     7.740    count_reg[16]_i_1_n_7
     SLICE_X43Y51         FDRE                                         r  count_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[16]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y51         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[16]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.741    
+                         arrival time                          -7.740    
   -------------------------------------------------------------------
                          slack                                  5.518    
 
@@ -882,8 +882,8 @@ Slack (MET) :             5.521ns  (required time - arrival time)
   Data Path Delay:        2.311ns  (logic 1.692ns (73.218%)  route 0.619ns (26.782%))
   Logic Levels:           4  (CARRY4=4)
   Clock Path Skew:        -0.194ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.956ns = ( 12.956 - 8.000 ) 
-    Source Clock Delay      (SCD):    5.427ns
+    Destination Clock Delay (DCD):    4.955ns = ( 12.955 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.426ns
     Clock Pessimism Removal (CPR):    0.277ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -895,15 +895,15 @@ Slack (MET) :             5.521ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.758     5.427    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.758     5.426    clk_IBUF_BUFG
     SLICE_X43Y47         FDRE                                         r  count_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.883 r  count_reg[1]/Q
+    SLICE_X43Y47         FDRE (Prop_fdre_C_Q)         0.456     5.882 r  count_reg[1]/Q
                          net (fo=1, routed)           0.618     6.501    count_reg_n_0_[1]
     SLICE_X43Y47         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     7.175 r  count_reg[0]_i_1/CO[3]
@@ -913,28 +913,28 @@ Slack (MET) :             5.521ns  (required time - arrival time)
                          net (fo=1, routed)           0.000     7.289    count_reg[4]_i_1_n_0
     SLICE_X43Y49         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.403 r  count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.001     7.404    count_reg[8]_i_1_n_0
+                         net (fo=1, routed)           0.001     7.403    count_reg[8]_i_1_n_0
     SLICE_X43Y50         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334     7.738 r  count_reg[12]_i_1/O[1]
-                         net (fo=1, routed)           0.000     7.738    count_reg[12]_i_1_n_6
+                                                      0.334     7.737 r  count_reg[12]_i_1/O[1]
+                         net (fo=1, routed)           0.000     7.737    count_reg[12]_i_1_n_6
     SLICE_X43Y50         FDRE                                         r  count_reg[13]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
                                                       8.000     8.000 r  
-    K17                                               0.000     8.000 r  clk (IN)
+    L16                                               0.000     8.000 r  clk (IN)
                          net (fo=0)                   0.000     8.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         1.421     9.421 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.880    11.301    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.392 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.564    12.956    clk_IBUF_BUFG
+                         net (fo=25, routed)          1.564    12.955    clk_IBUF_BUFG
     SLICE_X43Y50         FDRE                                         r  count_reg[13]/C
                          clock pessimism              0.277    13.232    
                          clock uncertainty           -0.035    13.197    
     SLICE_X43Y50         FDRE (Setup_fdre_C_D)        0.062    13.259    count_reg[13]
   -------------------------------------------------------------------
                          required time                         13.259    
-                         arrival time                          -7.738    
+                         arrival time                          -7.737    
   -------------------------------------------------------------------
                          slack                                  5.521    
 
@@ -963,11 +963,11 @@ Slack (MET) :             0.094ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -984,17 +984,17 @@ Slack (MET) :             0.094ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y50         FDRE                                         r  count_reg[12]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[12]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[12]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           1.971    
   -------------------------------------------------------------------
                          slack                                  0.094    
@@ -1018,11 +1018,11 @@ Slack (MET) :             0.105ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1039,17 +1039,17 @@ Slack (MET) :             0.105ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y50         FDRE                                         r  count_reg[14]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[14]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[14]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           1.982    
   -------------------------------------------------------------------
                          slack                                  0.105    
@@ -1073,11 +1073,11 @@ Slack (MET) :             0.130ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1094,17 +1094,17 @@ Slack (MET) :             0.130ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y50         FDRE                                         r  count_reg[13]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[13]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[13]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.007    
   -------------------------------------------------------------------
                          slack                                  0.130    
@@ -1128,11 +1128,11 @@ Slack (MET) :             0.130ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1149,17 +1149,17 @@ Slack (MET) :             0.130ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y50         FDRE                                         r  count_reg[15]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[15]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y50         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[15]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.007    
   -------------------------------------------------------------------
                          slack                                  0.130    
@@ -1183,11 +1183,11 @@ Slack (MET) :             0.133ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1207,17 +1207,17 @@ Slack (MET) :             0.133ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[16]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[16]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[16]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.010    
   -------------------------------------------------------------------
                          slack                                  0.133    
@@ -1241,11 +1241,11 @@ Slack (MET) :             0.144ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1265,17 +1265,17 @@ Slack (MET) :             0.144ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[18]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[18]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[18]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.021    
   -------------------------------------------------------------------
                          slack                                  0.144    
@@ -1299,11 +1299,11 @@ Slack (MET) :             0.169ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1323,17 +1323,17 @@ Slack (MET) :             0.169ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[17]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[17]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[17]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.046    
   -------------------------------------------------------------------
                          slack                                  0.169    
@@ -1357,11 +1357,11 @@ Slack (MET) :             0.169ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1381,17 +1381,17 @@ Slack (MET) :             0.169ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y51         FDRE                                         r  count_reg[19]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[19]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y51         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[19]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.046    
   -------------------------------------------------------------------
                          slack                                  0.169    
@@ -1415,11 +1415,11 @@ Slack (MET) :             0.172ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1442,17 +1442,17 @@ Slack (MET) :             0.172ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y52         FDRE                                         r  count_reg[20]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[20]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[20]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.049    
   -------------------------------------------------------------------
                          slack                                  0.172    
@@ -1476,11 +1476,11 @@ Slack (MET) :             0.183ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.595     1.507    clk_IBUF_BUFG
     SLICE_X43Y49         FDRE                                         r  count_reg[11]/C
   -------------------------------------------------------------------    -------------------
@@ -1503,17 +1503,17 @@ Slack (MET) :             0.183ns  (arrival time - required time)
 
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.447     0.447 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.683     1.130    clk_IBUF
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.159 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.859     2.018    clk_IBUF_BUFG
     SLICE_X43Y52         FDRE                                         r  count_reg[22]/C
-                         clock pessimism             -0.247     1.772    
-    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.105     1.877    count_reg[22]
+                         clock pessimism             -0.247     1.771    
+    SLICE_X43Y52         FDRE (Hold_fdre_C_D)         0.105     1.876    count_reg[22]
   -------------------------------------------------------------------
-                         required time                         -1.877    
+                         required time                         -1.876    
                          arrival time                           2.060    
   -------------------------------------------------------------------
                          slack                                  0.183    
@@ -1594,16 +1594,16 @@ Slack:                    inf
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         1.492     1.492 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           2.076     3.568    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.669 r  clk_IBUF_BUFG_inst/O
-                         net (fo=25, routed)          1.740     5.409    clk_IBUF_BUFG
+    L16                  IBUF (Prop_ibuf_I_O)         1.491     1.491 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.567    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.668 r  clk_IBUF_BUFG_inst/O
+                         net (fo=25, routed)          1.740     5.408    clk_IBUF_BUFG
     SLICE_X43Y53         FDRE                                         r  count_reg[24]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y53         FDRE (Prop_fdre_C_Q)         0.456     5.865 r  count_reg[24]/Q
-                         net (fo=2, routed)           1.685     7.550    led_OBUF
+    SLICE_X43Y53         FDRE (Prop_fdre_C_Q)         0.456     5.864 r  count_reg[24]/Q
+                         net (fo=2, routed)           1.685     7.549    led_OBUF
     M14                  OBUF (Prop_obuf_I_O)         3.531    11.081 r  led_OBUF_inst/O
                          net (fo=0)                   0.000    11.081    led
     M14                                                               r  led (OUT)
@@ -1634,11 +1634,11 @@ Slack:                    inf
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk_pin rise edge)
                                                       0.000     0.000 r  
-    K17                                               0.000     0.000 r  clk (IN)
+    L16                                               0.000     0.000 r  clk (IN)
                          net (fo=0)                   0.000     0.000    clk
-    K17                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.627     0.887    clk_IBUF
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.913 r  clk_IBUF_BUFG_inst/O
+    L16                  IBUF (Prop_ibuf_I_O)         0.259     0.259 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.886    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.912 r  clk_IBUF_BUFG_inst/O
                          net (fo=25, routed)          0.588     1.500    clk_IBUF_BUFG
     SLICE_X43Y53         FDRE                                         r  count_reg[24]/C
   -------------------------------------------------------------------    -------------------

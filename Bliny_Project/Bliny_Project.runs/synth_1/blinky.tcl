@@ -56,6 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
@@ -67,7 +69,7 @@ set_property parent.project_path C:/Users/jcort/Zybo_Projects/Blinky/Blinky/Blin
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/jcort/AppData/Roaming/Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part digilentinc.com:zybo-z7-10:part0:1.1 [current_project]
+set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
 set_property ip_output_repo c:/Users/jcort/Zybo_Projects/Blinky/Blinky/Bliny_Project/Bliny_Project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -82,10 +84,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/jcort/Zybo_Projects/Blinky/Blinky/Bliny_Project/Bliny_Project.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/jcort/Zybo_Projects/Blinky/Blinky/Bliny_Project/Bliny_Project.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc]
+read_xdc C:/Users/jcort/Zybo_Projects/Blinky/Blinky/Bliny_Project/Bliny_Project.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/jcort/Zybo_Projects/Blinky/Blinky/Bliny_Project/Bliny_Project.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/jcort/Zybo_Projects/Blinky/Blinky/Bliny_Project/Bliny_Project.srcs/utils_1/imports/synth_1/blinky.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
