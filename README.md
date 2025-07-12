@@ -1,2 +1,2 @@
 # Blinky
-Introductory project to the Zybo Z7-10 utilizing the dev board's LEDs.
+Introductory project to the Zybo board utilizing the dev board's LEDs.
